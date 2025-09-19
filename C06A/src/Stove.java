@@ -30,7 +30,8 @@ public class Stove {
 	 **** You must write the following method ****
 	 */
 	public void displayStove() {
-
+		for (int i=0; i<NUM_BURNERS; i++)
+			burners.get(i).display();
 	}
 	
 	/**
