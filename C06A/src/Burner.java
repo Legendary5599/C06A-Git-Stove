@@ -1,4 +1,13 @@
-
+/**
+ * Burner class that is able to be switched between different settings which are defined in the setting
+ * enumerated type: off, low, medium, and high. The temperature is updated to reflect what setting the burner is on
+ * and the timer.
+ * 
+ * @author Samantha Murray
+ * @author Ryan Clark
+ * 
+ * Date: 9/18/2025
+ */
 public class Burner {
 	public enum Temperature {BLAZING, HOT, WARM, COLD};
 
@@ -17,24 +26,24 @@ public class Burner {
 
 	public void plusButton() {
 		switch(mySetting) {
-			case OFF:
-				mySetting = Setting.LOW;
-				break;
-	
-			case LOW:
-				mySetting = Setting.MEDIUM;
-				break;
-	
-			case MEDIUM:
-				mySetting = Setting.HIGH;
-				break;
-	
-			case HIGH:
-				break;
+		case OFF:
+			mySetting = Setting.LOW;
+			break;
+
+		case LOW:
+			mySetting = Setting.MEDIUM;
+			break;
+
+		case MEDIUM:
+			mySetting = Setting.HIGH;
+			break;
+
+		case HIGH:
+			break;
 		}
 		timer = TIME_DURATION;
 	}
-	
+
 	public void minusButton() {
 		switch(mySetting) {
 		case HIGH:
@@ -54,15 +63,15 @@ public class Burner {
 		}
 		timer = TIME_DURATION;
 	}
-	
+
 	public void updateTemperature() {
-		
+
 	}
-	
+
 	public void display() {
 		System.out.println("[" + mySetting.toString() + "]....." + myTemperature);
 	}
-	
+
 	public Temperature getTemperature() {
 		return myTemperature;
 	}
