@@ -65,11 +65,62 @@ public class Burner {
 	}
 
 	public void updateTemperature() {
-
+		if(timer > 0) {
+			timer--;
+		}
+		switch(myTemperature) {
+		case COLD:
+			if(mySetting != Setting.OFF && timer == 0) {
+				myTemperature = Temperature.WARM;
+				if(mySetting != Setting.LOW) {
+					timer = TIME_DURATION;
+				}
+			}
+			break;
+		case WARM:
+			if((mySetting == Setting.MEDIUM || mySetting == Setting.HIGH) && timer == 0) {
+				myTemperature = Temperature.HOT;
+				if(mySetting == Setting.HIGH) {
+					timer = TIME_DURATION;
+				}
+			}
+			if(mySetting == Setting.OFF) {
+				myTemperature = Temperature.COLD;
+			}
+			break;
+		case HOT:
+			if(mySetting == Setting.HIGH && timer == 0) {
+				myTemperature = Temperature.BLAZING;
+			}
+			if((mySetting == Setting.LOW || mySetting == Setting.OFF) && timer == 0) {
+				myTemperature = Temperature.WARM;
+			}
+			break;
+		case BLAZING:
+			if(mySetting != Setting.HIGH && timer == 0) {
+				myTemperature = Temperature.HOT;
+			}
+			break;
+		}	
 	}
 
 	public void display() {
-		System.out.println("[" + mySetting.toString() + "]....." + myTemperature);
+		String message = "cooool";
+		switch(myTemperature) {
+		case COLD:
+			break;
+		case WARM:
+			message = "warm";
+			break;
+		case HOT:
+			message = "CAREFUL";
+			break;
+		case BLAZING:
+			message = "VERY HOT! DON'T TOUCH";
+			break;
+		}
+		System.out.println("[" + mySetting.toString() + "]....." + message);
+		
 	}
 
 	public Temperature getTemperature() {
