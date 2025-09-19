@@ -1,0 +1,33 @@
+commit e0f7a3d13c5511a4f1eba764c564804052fd9d20
+Author: Ryan Clark <nvidiamaster01@gmail.com>
+Date:   Fri Sep 19 12:20:43 2025 -0600
+
+    finished burner class and displayStove() method
+
+commit d724149e88de47bfcb4dd63976a7b04bee9ed33a
+Author: Ryan Clark <nvidiamaster01@gmail.com>
+Date:   Fri Sep 19 10:56:11 2025 -0600
+
+    fixed indentation, added documentation, learned the code
+
+commit ea7994b9c86fb9422ea5188a3bf7bfd6c974ae16
+Author: SamanthaSMurray <141533219+SamanthaSMurray@users.noreply.github.com>
+Date:   Thu Sep 18 21:05:26 2025 -0600
+
+    Setting Enum and Burner Class
+    
+    The setting enum is ready and the burner class has a couple methods that need to be finalized.
+
+commit a34fd91701f7be93bb8cefeee4d7dd1b20125355
+Author: SamanthaSMurray <141533219+SamanthaSMurray@users.noreply.github.com>
+Date:   Thu Sep 18 21:03:28 2025 -0600
+
+    Update Stove.java
+    
+    Add in display function
+
+commit da2f393297036ecd85df0e76201a6493952a14f9
+Author: Ryan Clark <nvidiamaster01@gmail.com>
+Date:   Mon Sep 15 12:48:22 2025 -0600
+
+    first
